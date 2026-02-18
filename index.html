@@ -28,29 +28,27 @@
     </style>
 </head>
 
-<body>
-    <section class="min-h-screen max-w-md bg-base-200 mx-auto flex flex-col justify-center">
-        <div class="logo w-[200px] mx-auto">
-            <img src="./assets/Logo-full.png" alt="logo">
-        </div>
-        <div class="form pt-10">
-            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow mx-auto rounded-2xl">
-                <div class="card-body">
-                    <fieldset class="fieldset">
-                        <label class="label text-neutral font-bold">Mobile Number</label>
-                        <input type="text" maxlength="11" minlength="11" class="input rounded-full bg-base-200"
-                            placeholder="Enter your 11 digit number" />
-                        <br>
-                        <label class="label text-neutral font-bold">4 Digit PIN</label>
-                        <input type="text" maxlength="4" minlength="4" class="input rounded-full bg-base-200"
-                            placeholder="Enter 4 digit pin" />
-                        <button class="btn btn-primary rounded-full mt-4">Login</button>
-                    </fieldset>
-                </div>
+<body class="min-h-screen max-w-md bg-base-200 mx-auto flex flex-col justify-center">
+    <div class="logo w-[200px] mx-auto">
+        <img src="./assets/Logo-full.png" alt="logo">
+    </div>
+    <div class="form pt-10">
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow mx-auto rounded-2xl">
+            <div class="card-body">
+                <fieldset class="fieldset">
+                    <label class="label text-neutral font-bold">Mobile Number</label>
+                    <input id="input-number" type="tel" maxlength="11" minlength="11"
+                        class="input rounded-full bg-base-200" placeholder="Enter your 11 digit number" />
+                    <br>
+                    <label class="label text-neutral font-bold">4 Digit PIN</label>
+                    <input id="input-pin" type="tel" maxlength="4" minlength="4" class="input rounded-full bg-base-200"
+                        placeholder="Enter 4 digit pin" />
+                    <button id="btn-login" class="btn btn-primary rounded-full mt-4">Login</button>
+                </fieldset>
             </div>
         </div>
+    </div>
 
-    </section>
     <script src="./script/login.js"></script>
 </body>
 
