@@ -53,27 +53,33 @@
         <p class="text-neutral/50">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
 
         <div class="buttons grid grid-cols-3 gap-3 mt-5">
-            <button class="btn bg-white rounded-xl hover:border-primary hover:text-primary flex-col h-full p-4">
+            <button onclick="showOnly('add-money')"
+                class="tag-menu tag-add-money btn border-2 rounded-xl hover:border-primary hover:text-primary flex-col h-full p-4 bg-primary text-primary-content">
                 <img src="./assets/opt-1.png" alt="opt-1">
                 <p>Add Money</p>
             </button>
-            <button class="btn bg-white rounded-xl hover:border-primary hover:text-primary flex-col h-full p-4">
+            <button onclick="showOnly('cashout')"
+                class="tag-menu tag-cashout btn border-2 rounded-xl hover:border-primary hover:text-primary flex-col h-full p-4">
                 <img src="./assets/opt-2.png" alt="opt-2">
                 <p>Cash Out</p>
             </button>
-            <button class="btn bg-white rounded-xl hover:border-primary hover:text-primary flex-col h-full p-4">
+            <button onclick="showOnly('sendMoney')"
+                class="tag-menu tag-sendMoney btn border-2 rounded-xl hover:border-primary hover:text-primary flex-col h-full p-4">
                 <img src="./assets/opt-3.png" alt="opt-3">
                 <p>Send Money</p>
             </button>
-            <button class="btn bg-white rounded-xl hover:border-primary hover:text-primary flex-col h-full p-4">
+            <button
+                class="tag-menu btn border-2 rounded-xl hover:border-primary hover:text-primary flex-col h-full p-4">
                 <img src="./assets/opt-4.png" alt="opt-4">
                 <p>Get Bonus</p>
             </button>
-            <button class="btn bg-white rounded-xl hover:border-primary hover:text-primary flex-col h-full p-4">
+            <button
+                class="tag-menu btn border-2 rounded-xl hover:border-primary hover:text-primary flex-col h-full p-4">
                 <img src="./assets/opt-5.png" alt="opt-5">
                 <p>Pay Bill</p>
             </button>
-            <button class="btn bg-white rounded-xl hover:border-primary hover:text-primary flex-col h-full p-4">
+            <button onclick="showOnly('history')"
+                class="tag-menu tag-history btn border-2 rounded-xl hover:border-primary hover:text-primary flex-col h-full p-4">
                 <img src="./assets/opt-6.png" alt="opt-6">
                 <p>Transactions</p>
             </button>
@@ -81,7 +87,7 @@
     </section>
 
     <!-- add money section -->
-    <div id="add-money" class="w-11/12 mx-auto space-y-5 mt-5">
+    <div id="add-money" class="tag w-11/12 mx-auto space-y-5 mt-5">
         <h2 class="text-xl font-bold">Add Money</h2>
         <div class="form">
             <div class="card bg-base-100 w-full shadow rounded-2xl">
@@ -124,7 +130,7 @@
     </div>
 
     <!-- cashout section -->
-    <div id="cashout" class="w-11/12 mx-auto space-y-5 mt-5">
+    <div id="cashout" class="tag w-11/12 mx-auto space-y-5 mt-5 hidden">
         <h2 class="text-xl font-bold">Cash Out</h2>
         <div class="form">
             <div class="card bg-base-100 w-full shadow rounded-2xl">
@@ -157,6 +163,50 @@
         </div>
     </div>
 
+
+    <!-- send money section -->
+    <div id="sendMoney" class="tag w-11/12 mx-auto space-y-5 mt-5 hidden">
+        <h2 class="text-xl font-bold">Send Money</h2>
+        <div class="form">
+            <div class="card bg-base-100 w-full shadow rounded-2xl">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="label text-neutral font-bold">User Account Number</label>
+                        <input id="input-user-account-number" type="number"
+                            class="input rounded-full bg-base-200 w-full focus:outline-none"
+                            placeholder="Enter agent 11 digit number" />
+
+                        <br>
+
+                        <label class="label text-neutral font-bold">Amount</label>
+                        <input id="input-send-money-amount" type="number"
+                            class="input rounded-full bg-base-200 w-full focus:outline-none"
+                            placeholder="Enter amount you want to cash out" />
+
+                        <br>
+
+                        <label class="label text-neutral font-bold">4 Digit PIN</label>
+                        <input id="input-send-money-pin" type="number"
+                            class="input rounded-full bg-base-200 w-full focus:outline-none"
+                            placeholder="Enter 4 digit pin" />
+
+                        <button id="btn-withdraw-money" class="btn btn-primary rounded-full mt-4">Send Now</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Transation history -->
+    <div id="history" class="tag w-11/12 mx-auto space-y-5 mt-5">
+        <h2 class="text-xl font-bold">Transaction History</h2>
+
+        <div id="history-container" class="space-y-4">
+            <!-- Transaction history will apear here -->
+        </div>
+    </div>
+
+    <!-- JavaScripts files -->
     <script src="./script/functions.js"></script>
     <script src="./script/addMoney.js"></script>
     <script src="./script/cashout.js"></script>
