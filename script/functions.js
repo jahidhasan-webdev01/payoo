@@ -74,7 +74,7 @@ function addInHistory(_type, _amount, _imgName) {
                     </div>
                     <div>
                         <h2 class="font-bold">${_type}</h2>
-                        <p class="text-sm mt-1">Amount: $${_amount}</p>
+                        <p class="text-sm mt-1">Amount: $ ${_amount}</p>
                         <p class="text-sm mt-1 text-neutral/50">${formatDateTime(new Date())}</p>
                     </div>
                 </div>
