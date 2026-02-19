@@ -62,3 +62,25 @@ function formatDateTime(date) {
         return date.toLocaleDateString() + " " + time;
     }
 }
+
+function addInHistory(_type, _amount, _imgName) {
+    const historyEl = getElementByID("history-container");
+    const newHistory = document.createElement("div");
+    newHistory.innerHTML =
+        ` <div class="history-card pl-8 pr-12 py-4 rounded-2xl bg-white flex justify-between border border-gray-200 hover:bg-primary hover:text-primary-content">
+                <div class="flex items-center gap-4">
+                    <div class="w-[60px] h-[60px] bg-gray-200 rounded-full overflow-hidden p-4">
+                        <img src="./assets/${_imgName}.png" alt="${_imgName}" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h2 class="font-bold">${_type}</h2>
+                        <p class="text-sm mt-1">Amount: $${_amount}</p>
+                        <p class="text-sm mt-1 text-neutral/50">${formatDateTime(new Date())}</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-ellipsis rotate-90"></i>
+            </div>
+        `
+
+    historyEl.append(newHistory)
+}
