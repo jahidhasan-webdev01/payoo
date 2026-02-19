@@ -3,7 +3,7 @@ document.getElementById("btn-withdraw-money")
         // Get input values
         const agentNumberInput = getValueByID("input-agent-number");
         const cashoutAmountInput = getValueByID("input-cashout-amount");
-        const pinInput = getValueByID("input-pin");
+        const pinInput = getValueByID("input-cashout-pin");
 
         //  Validate agent number
         if (agentNumberInput.length !== 11) {

@@ -80,6 +80,50 @@
         </div>
     </section>
 
+    <!-- add money section -->
+    <div id="add-money" class="w-11/12 mx-auto space-y-5 mt-5">
+        <h2 class="text-xl font-bold">Add Money</h2>
+        <div class="form">
+            <div class="card bg-base-100 w-full shadow rounded-2xl">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="label text-neutral font-bold">Agent Number</label>
+                        <select id="input-bank-name" class="select rounded-full bg-base-200 w-full focus:outline-none">
+                            <option disabled selected>Select a bank</option>
+                            <option value="DBBL">DBBL</option>
+                            <option value="City Bank">City Bank</option>
+                            <option class="UCB">UCB</option>
+                        </select>
+
+                        <br>
+
+                        <label class="label text-neutral font-bold">Bank Account Number</label>
+                        <input id="input-bank-account-number" type="number"
+                            class="input rounded-full bg-base-200 w-full focus:outline-none"
+                            placeholder="Enter bank account number" />
+
+                        <br>
+
+                        <label class="label text-neutral font-bold">Amount to Add</label>
+                        <input id="input-add-amount" type="number"
+                            class="input rounded-full bg-base-200 w-full focus:outline-none"
+                            placeholder="Enter amount you want to add" />
+
+                        <br>
+
+                        <label class="label text-neutral font-bold">4 Digit PIN</label>
+                        <input id="input-add-money-pin" type="number"
+                            class="input rounded-full bg-base-200 w-full focus:outline-none"
+                            placeholder="Enter 4 digit pin" />
+
+                        <button id="btn-add-money" class="btn btn-primary rounded-full mt-4">Add Money</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- cashout section -->
     <div id="cashout" class="w-11/12 mx-auto space-y-5 mt-5">
         <h2 class="text-xl font-bold">Cash Out</h2>
         <div class="form">
@@ -88,16 +132,25 @@
                     <fieldset class="fieldset">
                         <label class="label text-neutral font-bold">Agent Number</label>
                         <input id="input-agent-number" type="number"
-                            class="input rounded-full bg-base-200 w-full focus:outline-none" placeholder="Enter agent 11 digit number" />
+                            class="input rounded-full bg-base-200 w-full focus:outline-none"
+                            placeholder="Enter agent 11 digit number" />
+
                         <br>
+
                         <label class="label text-neutral font-bold">Amount</label>
-                        <input id="input-cashout-amount" type="number" class="input rounded-full bg-base-200 w-full focus:outline-none"
+                        <input id="input-cashout-amount" type="number"
+                            class="input rounded-full bg-base-200 w-full focus:outline-none"
                             placeholder="Enter amount you want to cash out" />
+
                         <br>
+
                         <label class="label text-neutral font-bold">4 Digit PIN</label>
-                        <input id="input-pin" type="number"
-                            class="input rounded-full bg-base-200 w-full focus:outline-none" placeholder="Enter 4 digit pin" />
-                        <button id="btn-withdraw-money" class="btn btn-primary rounded-full mt-4">Withdraw Money</button>
+                        <input id="input-cashout-pin" type="number"
+                            class="input rounded-full bg-base-200 w-full focus:outline-none"
+                            placeholder="Enter 4 digit pin" />
+
+                        <button id="btn-withdraw-money" class="btn btn-primary rounded-full mt-4">Withdraw
+                            Money</button>
                     </fieldset>
                 </div>
             </div>
