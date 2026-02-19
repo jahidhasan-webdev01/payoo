@@ -73,8 +73,8 @@
                 <img src="./assets/getBonus.png" alt="getBonus">
                 <p>Get Bonus</p>
             </button>
-            <button
-                class="tag-menu btn border-2 rounded-xl hover:border-primary hover:text-primary flex-col h-full p-4">
+            <button onclick="showOnly('payBill')"
+                class="tag-menu tag-payBill btn border-2 rounded-xl hover:border-primary hover:text-primary flex-col h-full p-4">
                 <img src="./assets/payBill.png" alt="payBill">
                 <p>Pay Bill</p>
             </button>
@@ -163,7 +163,6 @@
         </div>
     </div>
 
-
     <!-- send money section -->
     <div id="sendMoney" class="tag w-11/12 mx-auto space-y-5 mt-5 hidden">
         <h2 class="text-xl font-bold">Send Money</h2>
@@ -197,12 +196,57 @@
         </div>
     </div>
 
+    <!-- pay bill section -->
+    <div id="payBill" class="tag w-11/12 mx-auto space-y-5 mt-5">
+        <h2 class="text-xl font-bold">Pay Bill</h2>
+        <div class="form">
+            <div class="card bg-base-100 w-full shadow rounded-2xl">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="label text-neutral font-bold">Select to Pay</label>
+                        <select id="input-category-name"
+                            class="select rounded-full bg-base-200 w-full focus:outline-none">
+                            <option disabled selected>Select a category</option>
+                            <option value="Gas Bill">Gas Bill</option>
+                            <option value="Electricity Bill">Electricity Bill</option>
+                            <option class="WiFi Bill">WiFi Bill</option>
+                        </select>
+
+                        <br>
+
+                        <label class="label text-neutral font-bold">Biller Account Number (11 digit)</label>
+                        <input id="input-biller-account-number" type="number"
+                            class="input rounded-full bg-base-200 w-full focus:outline-none"
+                            placeholder="Enter a valid biller account number" />
+
+                        <br>
+
+                        <label class="label text-neutral font-bold">Amount to Pay</label>
+                        <input id="input-pay-amount" type="number"
+                            class="input rounded-full bg-base-200 w-full focus:outline-none"
+                            placeholder="Enter amount you want to add" />
+
+                        <br>
+
+                        <label class="label text-neutral font-bold">4 Digit PIN</label>
+                        <input id="input-pay-bill-pin" type="number"
+                            class="input rounded-full bg-base-200 w-full focus:outline-none"
+                            placeholder="Enter 4 digit pin" />
+
+                        <button id="btn-pay-bill" class="btn btn-primary rounded-full mt-4">Pay Now</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Transation history -->
-    <div id="history" class="tag w-11/12 mx-auto space-y-5 mt-5">
+    <div id="history" class="tag w-11/12 mx-auto space-y-5 mt-5 hidden">
         <h2 class="text-xl font-bold">Transaction History</h2>
 
         <div id="history-container" class="space-y-4">
-            <div class="history-card pl-8 pr-12 py-4 rounded-2xl bg-white flex justify-between border border-gray-200 hover:bg-primary hover:text-primary-content">
+            <div
+                class="history-card pl-8 pr-12 py-4 rounded-2xl bg-white flex justify-between border border-gray-200 hover:bg-primary hover:text-primary-content">
                 <div class="flex items-center gap-4">
                     <div class="w-[60px] h-[60px] bg-gray-200 rounded-full overflow-hidden p-4">
                         <img src="./assets/addMoney.png" alt="addMoney" class="w-full h-full object-cover">
@@ -223,6 +267,7 @@
     <script src="./script/functions.js"></script>
     <script src="./script/addMoney.js"></script>
     <script src="./script/sendMoney.js"></script>
+    <script src="./script/payBill.js"></script>
     <script src="./script/cashout.js"></script>
 </body>
 
