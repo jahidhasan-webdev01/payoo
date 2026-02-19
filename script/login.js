@@ -1,4 +1,4 @@
-document.getElementById("btn-login")
+getElementByID("btn-login")
     .addEventListener("click", function () {
         // Get input values
         const numberInput = getValueByID("input-number");
@@ -15,6 +15,6 @@ document.getElementById("btn-login")
         }
 
         // If pass every test
-        alert("Login successfully");
         window.location.assign("./home.html");
+        alert("Login successfully");
     }) 

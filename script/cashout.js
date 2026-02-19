@@ -1,16 +1,13 @@
-document.getElementById("btn-withdraw-money")
+getElementByID("btn-withdraw-money")
     .addEventListener("click", function () {
-        // Get input values
+        // Get and validate agent number
         const agentNumberInput = getValueByID("input-agent-number");
-        const cashoutAmountInput = getValueByID("input-cashout-amount");
-        const pinInput = getValueByID("input-cashout-pin");
-
-        //  Validate agent number
         if (agentNumberInput.length !== 11) {
             return alert("Invalid agent number");
         }
 
-        //  Check cashout amout is valid or not
+        //  Get and check cashout amout is valid or not
+        const cashoutAmountInput = getValueByID("input-cashout-amount");
         if (cashoutAmountInput < 1) {
             return alert("Too less amount to cash out");
         }
@@ -27,7 +24,8 @@ document.getElementById("btn-withdraw-money")
             return alert("Insufficient balance");
         }
 
-        // Finally validate 4 pin
+        // Finally get and validate 4 digit pin
+        const pinInput = getValueByID("input-cashout-pin");
         if (pinInput.length !== 4 || pinInput !== "1234") {
             return alert("Invalid PIN");
         } else {
@@ -36,4 +34,5 @@ document.getElementById("btn-withdraw-money")
 
         // Set new balance
         balanceElement.innerText = newBalance;
+        alert("Successfully cashout");
     })
