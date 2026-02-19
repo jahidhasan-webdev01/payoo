@@ -68,8 +68,8 @@
                 <img src="./assets/sendMoney.png" alt="sendMoney">
                 <p>Send Money</p>
             </button>
-            <button
-                class="tag-menu btn border-2 rounded-xl hover:border-primary hover:text-primary flex-col h-full p-4">
+            <button onclick="showOnly('getBonus')"
+                class="tag-menu tag-getBonus btn border-2 rounded-xl hover:border-primary hover:text-primary flex-col h-full p-4">
                 <img src="./assets/getBonus.png" alt="getBonus">
                 <p>Get Bonus</p>
             </button>
@@ -196,8 +196,27 @@
         </div>
     </div>
 
+    <!-- send money section -->
+    <div id="getBonus" class="tag w-11/12 mx-auto space-y-5 mt-5">
+        <h2 class="text-xl font-bold">Get Bonus</h2>
+        <div class="form">
+            <div class="card bg-base-100 w-full shadow rounded-2xl">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="label text-neutral font-bold">Enter Bonus Coupon</label>
+                        <input id="input-bonus-coupon" type="text"
+                            class="input rounded-full bg-base-200 w-full focus:outline-none"
+                            placeholder="Enter your coupon" />
+
+                        <button id="btn-get-bonus" class="btn btn-primary rounded-full mt-4">Get Bonus</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- pay bill section -->
-    <div id="payBill" class="tag w-11/12 mx-auto space-y-5 mt-5">
+    <div id="payBill" class="tag w-11/12 mx-auto space-y-5 mt-5 hidden">
         <h2 class="text-xl font-bold">Pay Bill</h2>
         <div class="form">
             <div class="card bg-base-100 w-full shadow rounded-2xl">
@@ -267,6 +286,7 @@
     <script src="./script/functions.js"></script>
     <script src="./script/addMoney.js"></script>
     <script src="./script/sendMoney.js"></script>
+    <script src="./script/getBonus.js"></script>
     <script src="./script/payBill.js"></script>
     <script src="./script/cashout.js"></script>
 </body>
