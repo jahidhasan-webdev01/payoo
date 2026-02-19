@@ -3,16 +3,16 @@ document.getElementById("btn-login")
         const numberInput = document.getElementById("input-number").value;
         const pinInput = document.getElementById("input-pin").value;
 
-        if (numberInput.length < 11) {
-            return alert("Invalid number")
+        if (numberInput.length !== 11) {
+            return alert("Invalid number");
         }
 
-        if (pinInput.length < 4) {
-            return alert("Invalid PIN")
+        if (pinInput.length !== 4) {
+            return alert("Invalid PIN");
         }
 
         if (numberInput === "01774266484" && pinInput === "1234") {
-            alert("Login success");
+            alert("Login successful");
             window.location.assign("/home.html");
         } else {
             return alert("Login failed!");
