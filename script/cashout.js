@@ -1,9 +1,9 @@
 document.getElementById("btn-withdraw-money")
     .addEventListener("click", function () {
         // Get input values
-        const agentNumberInput = document.getElementById("input-agent-number").value;
-        const cashoutAmountInput = document.getElementById("input-cashout-amount").value;
-        const pinInput = document.getElementById("input-pin").value;
+        const agentNumberInput = getValueByID("input-agent-number");
+        const cashoutAmountInput = getValueByID("input-cashout-amount");
+        const pinInput = getValueByID("input-pin");
 
         //  Validate agent number
         if (agentNumberInput.length !== 11) {
@@ -16,7 +16,7 @@ document.getElementById("btn-withdraw-money")
         }
 
         // Get the balance
-        const balanceElement = document.getElementById("balance-count");
+        const balanceElement = getElementByID("balance-count");
         const balance = balanceElement.innerText;
 
         // Calculate new balance

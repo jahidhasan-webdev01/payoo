@@ -1,20 +1,20 @@
 document.getElementById("btn-login")
     .addEventListener("click", function () {
-        const numberInput = document.getElementById("input-number").value;
-        const pinInput = document.getElementById("input-pin").value;
+        // Get input values
+        const numberInput = getValueByID("input-number");
+        const pinInput = getValueByID("input-pin");
 
-        if (numberInput.length !== 11) {
+        // validate number
+        if (numberInput.length !== 11 || numberInput !== "01774266484") {
             return alert("Invalid number");
         }
 
-        if (pinInput.length !== 4) {
+        // Validate pin
+        if (pinInput.length !== 4 || pinInput !== "1234") {
             return alert("Invalid PIN");
         }
 
-        if (numberInput === "01774266484" && pinInput === "1234") {
-            alert("Login successful");
-            window.location.assign("/home.html");
-        } else {
-            return alert("Login failed!");
-        }
+        // If pass every test
+        alert("Login successfully");
+        window.location.assign("./home.html");
     }) 
